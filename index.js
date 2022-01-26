@@ -8,7 +8,16 @@
  */
 function trimProperties(obj) {
   // ✨ implement
+  
+  const mine = Object.assign({}, obj)
+  for (const prop in mine)
+    mine[prop] = mine[prop].trim()
+  return mine
 }
+// const input = { foo: '  foo ', bar: 'bar ', baz: ' baz' }
+// console.log(trimProperties(input))
+
+
 
 /**
  * [Exercise 2] trimPropertiesMutation trims in place the properties of an object
