@@ -14,8 +14,6 @@ function trimProperties(obj) {
     mine[prop] = mine[prop].trim()
   return mine
 }
-// const input = { foo: '  foo ', bar: 'bar ', baz: ' baz' }
-// console.log(trimProperties(input))
 
 
 
@@ -29,7 +27,13 @@ function trimProperties(obj) {
  */
 function trimPropertiesMutation(obj) {
   // ✨ implement
+  for(let prop in obj){
+    obj[prop] = obj[prop].trim()
+  }
+  return obj
 }
+// const input = { foo: '  foo ', bar: 'bar ', baz: ' baz' }
+// console.log(trimPropertiesMutation(input))
 
 /**
  * [Exercise 3] findLargestInteger finds the largest integer in an array of objects { integer: 1 }
